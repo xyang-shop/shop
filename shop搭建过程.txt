@@ -1,4 +1,4 @@
-搭建shop系统
+搭建shop系统     jdk1.7   maven tomcat  
 	创建基于maven的聚合项目
 	添加各个module的pom依赖
 	整合SSM框架，添加配置文件
@@ -13,6 +13,6 @@
 	使用PageHelper分页（easyUi需要{total:"2",rows:[{"id":"1","name":"张三"},{"id":"2","name":"李四"}]} 数据）项目使用了公共EasyUIDataGridResult类，2各参数都传值
 	搭建FastDFS分布式文件系统
 		CentOS7 添加wget   yum -y install wget
-		使用./make.sh  make:cc 命令未找到,没有安装gcc     --- yum install gcc    -- yum install gcc-c++ 
+		使用./make.sh  make:cc 命令未找到,没有安装gcc     --- yum install gcc    -- yum install gcc-c++
 		netstat -unltp|grep fdfs  查看fdfs状态
 		安装客户端fastDFS，实现图片上传
