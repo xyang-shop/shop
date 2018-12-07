@@ -1,0 +1,18 @@
+搭建shop系统
+	创建基于maven的聚合项目
+	添加各个module的pom依赖
+	整合SSM框架，添加配置文件
+	搭建dubbo + zookeeper 服务
+		搭建单机zookeeper
+		在manage-service添加jar包依赖，在applicationContext-service.xml发布dubbo
+		在manage-web添加jar包依赖，在springmvc中注册消费者
+		实现在web项目中访问到Service中方法
+	添加easyUI相关文件
+	service启动项目，找不到mapper的bean(可能是启动项目时，没有加载*.xml文件。在dao下pom文件中”<include>**/*.xml</include>“错误，路径不对，没有加**/)
+	设置Listener监听器，加入全局路径变量basePath
+	使用PageHelper分页（easyUi需要{total:"2",rows:[{"id":"1","name":"张三"},{"id":"2","name":"李四"}]} 数据）项目使用了公共EasyUIDataGridResult类，2各参数都传值
+	搭建FastDFS分布式文件系统
+		CentOS7 添加wget   yum -y install wget
+		使用./make.sh  make:cc 命令未找到,没有安装gcc     --- yum install gcc    -- yum install gcc-c++ 
+		netstat -unltp|grep fdfs  查看fdfs状态
+		安装客户端fastDFS，实现图片上传
