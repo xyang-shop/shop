@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+        <!-- configure global attribute -->
+        <settings>
+            <!-- use jdbc getGeneratedKeys to get the database primary key auto_increment-->
+            <setting name="useGeneratedKeys" value="true"/>
+            <!-- 使用列表名替换列名,默认为 true -->
+            <setting name="useColumnLabel" value="true"/>
+            <!-- 开启驼峰命名转换: Table(create_time)->Entity(createTiem) -->
+            <setting name="mapUnderscoreToCamelCase" value="true"/>
+
+        </settings>
+
+    <!-- 配置分页插件 -->
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageHelper">
+            <!-- 设置数据库类型 Oracle,Mysql,MariaDB,SQLite,Hsqldb,PostgreSQL六种数据库 4.0.0以后的版本已经可以自动识别数据库了-->
+            <property name="helperDialect" value="mysql"/>
+            <!--  reasonable：分页合理化参数，默认值为false。当该参数设置为 true 时，pageNum<=0 时会查询第一页，
+             pageNum>pages（超过总数时），会查询最后一页。默认false 时，直接根据参数进行查询。 -->
+            <property name="reasonable" value="true"/>
+        </plugin>
+    </plugins>
+</configuration>
