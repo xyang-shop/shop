@@ -1,10 +1,16 @@
-.idea
-*.iml
-/target/
+##ignore this file##
+/target/ 
+
 .classpath
 .project
 .settings      
-*.jar  
+
+.idea
+*.iml
+.classpath
+.project
+.settings
+*.jar
 *.rar  
 *.tar  
 *.zip  
