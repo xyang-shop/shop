@@ -16,3 +16,4 @@
 		使用./make.sh  make:cc 命令未找到,没有安装gcc     --- yum install gcc    -- yum install gcc-c++
 		netstat -unltp|grep fdfs  查看fdfs状态
 		安装客户端fastDFS，实现图片上传
+	搭建了表现层中的商城门户系统——shop-portal-web

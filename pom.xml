@@ -12,6 +12,7 @@
     <module>shop-manager</module>
     <module>shop-manager-web</module>
       <module>shop-portal-web</module>
+      <module>shop-content</module>
   </modules>
   <packaging>pom</packaging>
   <!-- 集中定义依赖版本号 -->
