@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.xyang.shop.AppTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.039 sec <<< FAILURE!
-initializationError(com.xyang.shop.AppTest)  Time elapsed: 0.003 sec  <<< ERROR!
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.045 sec <<< FAILURE!
+initializationError(com.xyang.shop.AppTest)  Time elapsed: 0.004 sec  <<< ERROR!
 java.lang.NoClassDefFoundError: org/hamcrest/SelfDescribing
 	at java.lang.ClassLoader.defineClass1(Native Method)
 	at java.lang.ClassLoader.defineClass(ClassLoader.java:791)

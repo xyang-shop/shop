@@ -1,3 +1,10 @@
 .idea
 *.iml
 /target/
+.classpath
+.project
+.settings      
+*.jar  
+*.rar  
+*.tar  
+*.zip  

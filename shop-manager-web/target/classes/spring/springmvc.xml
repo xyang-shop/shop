@@ -41,4 +41,7 @@
 
     <dubbo:reference interface="com.xyang.shop.service.ItemCatService" id="itemCatService"
                      url="dubbo://192.168.235.1:20880" timeout="3000"/>
+
+    <dubbo:reference interface="com.xyang.shop.service.ContentCategoryService" id="contentCategoryService"
+                     url="dubbo://192.168.235.1:20881" timeout="3000"/>
 </beans>
