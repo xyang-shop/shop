@@ -1,10 +1,7 @@
 ##ignore this file##
 target/
-
-.classpath
-.project
-.settings      
-
+/target/
+*.class
 .idea
 *.iml
 .classpath
