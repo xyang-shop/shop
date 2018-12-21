@@ -27,7 +27,7 @@ $(function(){
         	var _tree = $(this);
         	if(node.id == 0){
         		// 新增节点
-        		$.post("/content/category/create",{parentId:node.parentId,name:node.text},function(data){
+        		$.post("${basePath}/content/category/create.action",{parentId:node.parentId,name:node.text},function(data){
         			if(data.status == 200){
         				_tree.tree("update",{
             				target : node.target,
@@ -38,7 +38,7 @@ $(function(){
         			}
         		});
         	}else{
-        		$.post("/content/category/update",{id:node.id,name:node.text});
+        		$.post("/content/category/update.action",{id:node.id,name:node.text});
         	}
         }
 	});

@@ -2,6 +2,7 @@ package com.xyang.shop.web;
 
 import com.xyang.shop.pojo.EasyUITreeNode;
 import com.xyang.shop.service.ContentCategoryService;
+import com.xyang.shop.utils.BaseResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,8 +24,15 @@ public class ContentCategoryController {
     @RequestMapping("/list")
     @ResponseBody
     public List<EasyUITreeNode> getContentCatList(@RequestParam(defaultValue="0") Long id) {
-        System.out.println(1111);
         return contentCategoryService.getContentCatList(id);
     }
 
+
+    @ResponseBody
+    @RequestMapping("/create")
+    public BaseResult insertContentCat(Long parentId,String name){
+        System.out.println(1);
+        BaseResult baseResult = contentCategoryService.insertContentCat(parentId, name);
+        return baseResult;
+    }
 }

@@ -1,6 +1,7 @@
 package com.xyang.shop.service;
 
 import com.xyang.shop.pojo.EasyUITreeNode;
+import com.xyang.shop.utils.BaseResult;
 
 import java.util.List;
 
@@ -10,4 +11,6 @@ import java.util.List;
 public interface ContentCategoryService {
 
     List<EasyUITreeNode> getContentCatList(Long parentId);
+
+    BaseResult insertContentCat(long parentId , String name);
 }

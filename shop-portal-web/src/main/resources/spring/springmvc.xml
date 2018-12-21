@@ -36,9 +36,9 @@
     <dubbo:application name="shop-portal-web"/>
     <dubbo:registry protocol="zookeeper" address="zookeeper://192.168.255.8:2181"/>
     <dubbo:protocol port="20880" name="dubbo"/>
-<!--    <dubbo:reference interface="com.xyang.shop.service.ItemService" id="itemService"
-                     url="dubbo://192.168.235.1:20880" timeout="3000"/>
+ <dubbo:reference interface="com.xyang.shop.service.ContentService" id="itemService"
+                     url="dubbo://192.168.235.1:20881" timeout="3000"/>
 
-    <dubbo:reference interface="com.xyang.shop.service.ItemCatService" id="itemCatService"
-                     url="dubbo://192.168.235.1:20880" timeout="3000"/>-->
+    <!--     <dubbo:reference interface="com.xyang.shop.service.ItemCatService" id="itemCatService"
+                       url="dubbo://192.168.235.1:20880" timeout="3000"/>-->
 </beans>
