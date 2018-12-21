@@ -17,3 +17,18 @@
 		netstat -unltp|grep fdfs  查看fdfs状态
 		安装客户端fastDFS，实现图片上传
 	搭建了表现层中的商城门户系统——shop-portal-web
+	    中间出现的问题，1.虚拟机ip问题  2. mapper文件  *.xml 没有打包  还是路径错误
+    搭建redis服务
+        redis-desktop-manager ？
+        redis 的持久化操作  .rdb和.aof 文件
+        搭建redis集群（redis5.0开始不再使用ruby搭建集群）
+            安装ruby（出现问题：ruby系统版本过低，安装rvm 在线升级ruby）
+            启动所有redis
+                redis-cli --cluster create 192.168.235.8:7001 192.168.235.8:7002 192.168.235.8:7003 192.168.235.8:7004 192.168.235.8:7005 192.168.235.8:7006 --cluster-replicas 1
+                 添加集群节点 3个master 3个slave   在最后的replicas 1 指的是 主节点与从节点数的比例值.表示 master/slave=1
+                redis-cli --cluster create 192.168.235.8:7001 192.168.235.8:7002 192.168.235.8:7003 192.168.235.8:7004 192.168.235.8:7005  192.168.235.8:7006
+                将启动6个master
+                在redis集群测试中，注意redis和jedis版本问题
+        将redis交给spring管理，配置文件中单机版配置与集群版配置不能共存
+        在业务逻辑中添加redis缓存
+    搭建solr服务框架
