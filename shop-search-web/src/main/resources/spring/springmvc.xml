@@ -12,7 +12,7 @@
     <!-- 加载文件上前缀 http://192.168.235.8/-->
     <context:property-placeholder location="classpath:resource/resource.properties" />
 
-    <context:component-scan base-package="com.xyang.shop.web" />
+    <context:component-scan base-package="com.xyang.shop.search.controller" />
     <mvc:annotation-driven />
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/jsp/" />
@@ -33,18 +33,12 @@
     </bean>
 
     <!-- 引用dubbo服务 -->
-    <dubbo:application name="shop-manager-web"/>
+    <dubbo:application name="shop-search-web"/>
     <dubbo:registry protocol="zookeeper" address="zookeeper://192.168.255.8:2181"/>
-    <!--<dubbo:protocol port="20880" name="dubbo"/>-->
+   <!-- <dubbo:protocol port="20880" name="dubbo"/>-->
+ <!--<dubbo:reference interface="com.xyang.shop.service.ContentService" id="itemService"
+                     url="dubbo://192.168.235.1:20881" timeout="3000"/>-->
 
-    <dubbo:reference interface="com.xyang.shop.service.ItemService" id="itemService"
-                     url="dubbo://192.168.235.1:20880" timeout="3000"/>
-    <dubbo:reference interface="com.xyang.shop.service.ItemCatService" id="itemCatService"
-                     url="dubbo://192.168.235.1:20880" timeout="3000"/>
-    <dubbo:reference interface="com.xyang.shop.service.ContentCategoryService" id="contentCategoryService"
-                     url="dubbo://192.168.235.1:20881" timeout="3000"/>
-    <dubbo:reference interface="com.xyang.shop.service.ContentService" id="contentService"
-                     url="dubbo://192.168.235.1:20881" timeout="3000"/>
-    <dubbo:reference interface="com.xyang.shop.search.service.SearchItemService" id="searchItemService"
-                     url="dubbo://192.168.235.1:20882" timeout="3000"/>
+    <!--     <dubbo:reference interface="com.xyang.shop.service.ItemCatService" id="itemCatService"
+                       url="dubbo://192.168.235.1:20880" timeout="3000"/>-->
 </beans>

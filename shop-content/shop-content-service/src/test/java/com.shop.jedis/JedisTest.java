@@ -14,7 +14,7 @@ import java.util.Set;
  */
 public class JedisTest {
 
-    @Test
+ /*   @Test
     public void testJedisSingle(){
         Jedis jedis = new Jedis("192.168.235.8",6379);
         jedis.set("mytestJedis","10000");
@@ -38,7 +38,7 @@ public class JedisTest {
 
         jedisPool.close();
     }
-
+*/
     @Test
     public void testJedisCluster(){
 
@@ -54,7 +54,7 @@ public class JedisTest {
 
         cluster.set("testJedisCluster","aaaaaa");
 
-        String jedisCluster = cluster.get("testJedisCluster");
+        String jedisCluster = cluster.get("testJedisCl uster");
         System.out.println(jedisCluster);
         try {
             cluster.close();
