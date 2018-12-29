@@ -32,3 +32,6 @@
         将redis交给spring管理，配置文件中单机版配置与集群版配置不能共存
         在业务逻辑中添加redis缓存
     搭建solr服务框架
+    	安装solr服务（solr7.2.0）
+    		使用ik 分词器
+    		 复制域（https://blog.csdn.net/faultyoung/article/details/80156856?utm_source=blogxgwz6）
